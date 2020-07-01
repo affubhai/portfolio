@@ -1,0 +1,183 @@
+/* variables */
+
+:root{
+    --primary: #7700FF;
+    --secondary: #0000F8;
+}
+
+/* reset */
+
+body{
+    margin: 1vw;
+    padding: 0;
+    text-decoration: none;
+    background: #ECF0F3;
+    font-family: sans-serif;
+
+    /*  grid */
+    display: grid;
+    grid-template-areas: 'menu'
+                         'welcome '
+                         'logo '
+                         'footer';
+}
+
+/* base styles */
+
+.btn{
+    border: none;
+    color: var(--secondary);
+    background:transparent;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(174,174,192,0.4),
+                -2px -2px 4px rgba(255,255,255,0.8);
+    
+    
+}
+
+.btn:hover{
+
+    color: white;
+    background-color: var(--primary);
+
+}
+
+.footer{
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: footer;
+    bottom: 0;
+
+}
+
+.footer-svg{
+
+   width: 99vw;
+   flex: 1;
+   
+    
+}
+
+
+
+.begin{
+    
+    
+   position: absolute;
+   background-color: white;    
+    
+}
+
+.nav-btns{
+    
+    display: flex;
+    
+}
+
+
+
+.nav-bar{
+    display: flex;
+    grid-area: menu;
+    justify-content: space-between;
+    margin-right: 10px;
+
+}
+
+.main-body{
+    grid-area: welcome;
+    display: grid;
+    
+   
+    margin: 10px 10px;
+    border: solid var(--secondary);
+    border-radius: 40px;
+    padding: 50px ;
+    
+    
+}
+.logo2{
+    height: 150px;
+    width: 100%;
+         
+        
+}
+
+/* fonts */
+
+.sec-text{
+
+    color: var(--primary);
+    font-size: 1.3em;
+    
+    
+}
+
+.pri-text{
+
+    color: var(--primary);
+    font-size: 2em ;
+    font-weight: 700;
+   
+    
+}
+
+.body-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn{
+
+    font-size: 1.5em;
+    margin-left: 2vh;
+}
+
+
+
+/* mobile styles */
+
+
+
+/* small tablet styles */
+
+@media (min-width: 620px){
+    
+    body{
+        font-size: 18px ;
+    }
+}
+
+/* large tablets and laptop styles */
+
+@media (min-width: 960px) {
+    body{
+        font-size: 20px ;
+    }
+    .main-body{
+        grid-template-columns: 2fr 1fr
+    }
+    
+}
+
+/* desktop styles */
+
+@media (min-width: 1200px) {
+    body{
+        font-size: 30px ;
+    }
+    .main-body{
+        grid-template-columns: 2fr 1fr
+    }
+    .logo2{
+        height: 200px;
+        margin-top: 40px;
+    }
+    
+    
+}
